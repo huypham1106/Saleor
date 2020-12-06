@@ -1,6 +1,6 @@
-import org.openqa.selenium.By
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.WebElement
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -17,24 +17,31 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.webui.driver.DriverFactory
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 CustomKeywords.'addAppeleJuice.clickGroceriesLabel'()
 
-CustomKeywords.'filter_Function.Filter.clickFlavorInFilter'('Orange')
+//List<WebElement> productList = driver.findElements(By.xpath("//div[@data-test='productList']//a"))
+String flavor = "Orange"
 
-//String text1 = CustomKeywords.'filter_Function.Filter.clickFlavorInFilter'('Orange');
+//List<Product> list = new List<Product>()
 
+CustomKeywords.'filter_Function.Filter.selectFlavors'(flavor)
+//CustomKeywords.'filter_Function.Filter.selectFlavors'(list)
 
-WebDriver driver = DriverFactory.getWebDriver()
-List<WebElement> productList = driver.findElements(By.xpath("//div[@data-test='productList']//a"))
+//WebDriver driver = DriverFactory.getWebDriver()
+//
+//List<Product> productList = driver.findElements(By.xpath("//div[@data-test='productList']//a"))
+//
+//for (int i = 1; i <= productList.size(); i++) {
+//    WebUI.click(findTestObject('Object Repository/Filter/div_Dynamic Pruduct List', [('no') : i]))
+//
+//    WebUI.click(findTestObject('Object Repository/Apple Juice/Attribute/div_ATTRIBUTES'))
+//
+//    String text = WebUI.getText(findTestObject('Object Repository/Apple Juice/Attribute/li_Flavor title Attribute'))
+//
+//    WebUI.verifyEqual(flavor, text)
+//}
 
-for(int i=1 ; i<=productList.size(); i++)
-{
-	WebUI.click(findTestObject('Object Repository/Filter/div_Dynamic Pruduct List',['no':i]))
-	WebUI.click(findTestObject('Object Repository/Apple Juice/Attribute/div_ATTRIBUTES'))
-	String text = WebUI.getText(findTestObject('Object Repository/Apple Juice/Attribute/li_Flavor title Attribute'))
-	WebUI.verifyEqual(text1, text)
-	
-}
+//CustomKeywords.'addAppeleJuice.addAppleJuice'()
 

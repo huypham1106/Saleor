@@ -31,7 +31,6 @@ for (int i=1; i<=sizeList.size() ; i++)
 	if(WebUI.verifyElementPresent(findTestObject('Object Repository/Apple Juice/p_Out of stock'), GlobalVariable.TimeOut,FailureHandling.OPTIONAL))
 		
 	{
-				println("no vo day ne  =======")
 				WebUI.verifyElementNotClickable(findTestObject('Object Repository/Apple Juice/button_Add to basket'))
 				WebUI.click(findTestObject('Object Repository/Apple Juice/svg_Remove Size'))
 	}

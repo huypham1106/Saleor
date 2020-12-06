@@ -6,12 +6,11 @@
    <elementGuidId>33ccb658-2be8-442e-a939-7400ddd7aee1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//nav[@id='header']/div/ul/li[2]/ul/li[2]/ul/li[2]/a</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//li[@data-test=&quot;mainMenuItem&quot;]//a[text()=&quot;${name}&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

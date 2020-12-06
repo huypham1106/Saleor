@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_Products found 13</name>
+   <name>span_Products found</name>
    <tag></tag>
    <elementGuidId>db3bf812-3e5c-437b-88f7-54eedc69e48e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='root']//span[contains(@class,'sc-exAgwC')]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>span.sc-exAgwC.gxSELu</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']//span[contains(@class,'sc-exAgwC')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

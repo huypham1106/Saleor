@@ -21,21 +21,28 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import internal.GlobalVariable as GlobalVariable
 
-CustomKeywords.'addAppeleJuice.clickGroceriesLabel'()
+WebUI.openBrowser(GlobalVariable.appUrl)
+CustomKeywords.'menu_bar.MainMenu.clickMainMenu'("Groceries")
+//CustomKeywords.'addAppeleJuice.addAppleJuice'()
 
-CustomKeywords.'addAppeleJuice.addAppleJuice'()
-
-priceApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_price 3.00'))
-nameApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_Apple Juice'))
-sizeApple = WebUI.getAttribute(findTestObject('Object Repository/Apple Juice/input_Bottle-size'),'value')
-quantityApple = WebUI.getAttribute(findTestObject('Object Repository/Apple Juice/input_Quantity'),'value')
-
+CustomKeywords.'product.AlcoholProduct.addProduct'("Apple Juice")
+WebUI.waitForElementClickable(findTestObject('Object Repository/MyBag/svg_Close Button'), GlobalVariable.TimeOut)
+WebUI.click(findTestObject('Object Repository/MyBag/svg_Close Button'))
 List<Product> productDetailInScreen = new ArrayList<Product>()
-Product itemInScreen = new Product(priceApple, nameApple, sizeApple, quantityApple)
-productDetailInScreen.add(itemInScreen)
+priceApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_price 3.00'))
+//nameApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_Apple Juice'))
+//sizeApple = WebUI.getAttribute(findTestObject('Object Repository/Apple Juice/input_Bottle-size'),'value')
+//quantityApple = WebUI.getAttribute(findTestObject('Object Repository/Apple Juice/input_Quantity'),'value')
+//
+//
+//Product itemInScreen = new Product(priceApple, nameApple, sizeApple, quantityApple)
+//productDetailInScreen.add(itemInScreen)
   
-WebUI.click(findTestObject('Object Repository/Banana Juice/a_Juices'))
-CustomKeywords.'addAppeleJuice.addBananaJuice'()
+//WebUI.click(findTestObject('Object Repository/Banana Juice/a_Juices'))
+//CustomKeywords.'addAppeleJuice.addBananaJuice'()
+CustomKeywords.'product.ProductInScreen.saveInforOfProductInScreen'(productDetailInScreen)
+CustomKeywords.'product.AlcoholProduct.addAlcoholProduct'("Banana Juice")
+
 nameApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_Apple Juice'))
 priceApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_price 3.00'))
 sizeApple = WebUI.getAttribute(findTestObject('Object Repository/Apple Juice/input_Bottle-size'),'value')
@@ -118,3 +125,6 @@ if ( productDetailInCart.size() == productDetailInScreen.size())
 		}
 	
 	WebUI.verifyEqual(flag, 1)
+	
+	//Map product = ['apple juice': ['size': 1, 'quantity': 2], 'banana juice': ['size': 1]]
+	//product['apple juice']

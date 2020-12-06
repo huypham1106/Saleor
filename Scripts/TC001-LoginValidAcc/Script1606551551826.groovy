@@ -15,9 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-CustomKeywords.'loginFunc.loginIntoApp'()
-WebUI.click(findTestObject('Object Repository/Login/svg_Profile'))
-WebUI.click(findTestObject('Object Repository/Login/label_My Account'))
-
-
+CustomKeywords.'login_page.loginFunc.loginWithExistingAccount'()
+CustomKeywords.'login_page.loginFunc.verifyLoginSuccess'()
+WebUI.closeBrowser()
 

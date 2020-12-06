@@ -21,26 +21,20 @@ import internal.GlobalVariable
 public class CompareListt {
 
 	@Keyword
-	public boolean CompareProduct (List<Product> productDetailInCart ,List<Product> productDetailInScreen) 
-	{
-		if (productDetailInCart!=null && productDetailInScreen!=null && productDetailInCart.size() == productDetailInScreen.size()) 
-		{
-			for (Product Cartdata : productDetailInCart) 
-			{
-				for (Product Screendata : productDetailInScreen) 
-				{
+	public boolean CompareProduct (List<Product> productDetailInCart ,List<Product> productDetailInScreen) {
+		if (productDetailInCart!=null && productDetailInScreen!=null && productDetailInCart.size() == productDetailInScreen.size()) {
+			for (Product Cartdata : productDetailInCart) {
+				for (Product Screendata : productDetailInScreen) {
 					if (Cartdata.getName().equals(Screendata.getName()) &&
 					Cartdata.getPrice().equals(Screendata.getPrice()) &&
 					Cartdata.getSize().equals(Screendata.getSize()) &&
-					Cartdata.getQuantity().equals(Screendata.getQuantity())) 
-					{ 
-						return  true; 
-					} 
+					Cartdata.getQuantity().equals(Screendata.getQuantity())) {
+						return  true;
+					}
 				}
 			}
 		}
-		else
-		{
+		else {
 			return false;
 		}
 		return false;

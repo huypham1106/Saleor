@@ -1,3 +1,4 @@
+package login_page
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -21,7 +22,7 @@ import internal.GlobalVariable
 public class loginFunc {
 
 	@Keyword
-	public void login (String appUrl, String userName, String passWord) {
+	public void loginWithAccount (String appUrl, String userName, String passWord) {
 		WebUI.openBrowser(appUrl)
 		WebUI.waitForPageLoad(GlobalVariable.TimeOut)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Login/svg_Profile'), GlobalVariable.TimeOut)
@@ -30,11 +31,25 @@ public class loginFunc {
 		WebUI.setText(findTestObject('Object Repository/Login/input_Email'), userName)
 		WebUI.setText(findTestObject('Object Repository/Login/input_Password'), passWord)
 		WebUI.click(findTestObject('Object Repository/Login/button_Sign in'))
-		WebUI.delay(1)
 	}
 
 	@Keyword
-	public void loginIntoApp() {
-		login(GlobalVariable.appUrl,GlobalVariable.userName ,GlobalVariable.passWord )
+	public void loginWithExistingAccount() {
+		loginWithAccount(GlobalVariable.appUrl,GlobalVariable.userName ,GlobalVariable.passWord )
+	}
+
+	@Keyword
+	public void verifyLoginSuccess() {
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Login/svg_Profile'), GlobalVariable.TimeOut)
+		WebUI.mouseOver(findTestObject('Object Repository/Login/svg_Profile'))
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Login/label_My Account'), GlobalVariable.TimeOut)
+		WebUI.verifyElementText(findTestObject('Object Repository/Login/label_My Account'), "MY ACCOUNT")
+	}
+	
+	@Keyword
+	public void verifyLoginFail()
+	{
+		WebUI.getText(findTestObject('Object Repository/Login/span_ErrorMess'))
+		WebUI.verifyElementText(findTestObject('Object Repository/Login/span_ErrorMess'), 'Please, enter valid credentials')
 	}
 }

@@ -1,3 +1,4 @@
+package product
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -18,7 +19,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class addProd {
+public class AlcoholProduct {
 
 	private TestObject lab_Groceries = findTestObject('Object Repository/Groceries/a_Groceries')
 	private TestObject lab_Alcohol = findTestObject('Object Repository/Alcohol/a_Alcohol')
@@ -31,24 +32,18 @@ public class addProd {
 
 
 	@Keyword
-	public void add2Product() {
-		WebUI.openBrowser(GlobalVariable.appUrl)
-		WebUI.waitForPageLoad(GlobalVariable.TimeOut)
-		WebUI.waitForElementClickable(lab_Groceries, GlobalVariable.TimeOut)
-		WebUI.mouseOver(lab_Groceries)
-		WebUI.waitForElementClickable(lab_Alcohol, GlobalVariable.TimeOut)
-		WebUI.click(lab_Alcohol)
-		WebUI.waitForPageLoad(GlobalVariable.TimeOut)
-		WebUI.waitForElementClickable(div_RebW, GlobalVariable.TimeOut)
-		WebUI.click(div_RebW)
-		WebUI.setText(findTestObject('Object Repository/Alcohol/input_Quantity'), "2")
+	public void addProduct(String productName) {
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Alcohol/div_Red Wine13.50',['name': productName]), GlobalVariable.TimeOut)
+		WebUI.click(findTestObject('Object Repository/Alcohol/div_Red Wine13.50',['name': productName]))
 
+		if(WebUI.verifyElementPresent(findTestObject('Object Repository/Apple Juice/svg_Click size'), GlobalVariable.TimeOut,FailureHandling.OPTIONAL)) {
+			WebUI.click(findTestObject('Object Repository/Apple Juice/svg_Click size'))
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Apple Juice/div_size 500ml'), GlobalVariable.TimeOut)
+			WebUI.click(findTestObject('Object Repository/Apple Juice/div_size 500ml'))
+		}
+
+		WebUI.setText(findTestObject('Object Repository/Alcohol/input_Quantity'), "2")
 		WebUI.click(btn_AddBasket)
 		WebUI.waitForElementClickable(btn_Close, GlobalVariable.TimeOut)
-		WebUI.click(btn_Close)
-
-		WebUI.click(tab_Alcohol)
-		WebUI.click(div_SeaB)
-		WebUI.click(btn_AddBasket)
 	}
 }

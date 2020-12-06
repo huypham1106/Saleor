@@ -1,4 +1,5 @@
-package filter_Function
+package menu_bar
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -19,17 +20,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class Filter {
+public class MainMenu {
 
-	String titleProduct
 	@Keyword
-	public String clickFlavorInFilter(String flavor) {
-		WebUI.click(findTestObject('Object Repository/Filter/span_FILTERS'))
-		WebUI.scrollToElement(findTestObject('Object Repository/Filter/button_VIEW ALL OPTIONS'), GlobalVariable.TimeOut)
-		WebUI.click(findTestObject('Object Repository/Filter/button_VIEW ALL OPTIONS'))
+	public void clickMainMenu(String mainMenu) {
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Groceries/a_Groceries',['name': mainMenu]), GlobalVariable.TimeOut)
+		WebUI.click(findTestObject('Object Repository/Groceries/a_Groceries',['name': mainMenu]))
+	}
 
-		WebUI.click(findTestObject('Object Repository/Filter/div_Dynamic Flavor',['flavor':flavor]))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Groceries/div_Apple Juice'), GlobalVariable.TimeOut)
-		return "Huy"
+	@Keyword
+	public void clickSubMenu( String mainMenu,String subMenu) {
+		WebUI.delay(5)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Groceries/a_Groceries',['name':mainMenu]), GlobalVariable.TimeOut)
+		WebUI.mouseOver(findTestObject('Object Repository/Groceries/a_Groceries',['name':mainMenu]))
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Alcohol/a_Alcohol',['name':subMenu]),GlobalVariable.TimeOut )
+		WebUI.click(findTestObject('Object Repository/Alcohol/a_Alcohol',['name':subMenu]))
 	}
 }

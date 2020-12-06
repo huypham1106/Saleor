@@ -6,12 +6,12 @@
    <elementGuidId>7d35be7f-10f6-4dc2-ba35-d2956d593c36</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='root']/div/div/div[2]/a/div</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>div.sc-emmjRN.bPHtOO</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//h4[text()='${name}']//parent::div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

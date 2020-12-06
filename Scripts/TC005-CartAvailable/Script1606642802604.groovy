@@ -19,61 +19,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-CustomKeywords.'addProd.add2Product'()
+WebUI.openBrowser(GlobalVariable.appUrl)
+CustomKeywords.'menu_bar.MainMenu.clickSubMenu'("Groceries", "Alcohol")
+CustomKeywords.'product.AlcoholProduct.addProduct'("Red Wine")
+WebUI.click(findTestObject('Object Repository/MyBag/svg_Close Button'))
+WebUI.click(findTestObject('Object Repository/Alcohol/a_Alcohol(2)'))
+CustomKeywords.'product.AlcoholProduct.addProduct'("Seaman Beer")
+CustomKeywords.'cart.CartInHomePage.verifyQuantityInCart'()
+CustomKeywords.'cart.CartInHomePage.verifyPriceInCart'()
 
-WebUI.delay(5)
 
-WebDriver driver = DriverFactory.getWebDriver()
-
-//get list unit element
-WebElement divUnit = driver.findElement(By.xpath('//div[@class=\'cart\']//ul[@class=\'cart__list\']'))
-
-List<WebElement> productList = divUnit.findElements(By.xpath('//span[@data-test=\'quantity\']'))
-
-//get list price element
-WebElement divPrice = driver.findElement(By.xpath('//div[@class=\'cart\']//ul[@class=\'cart__list\']'))
-
-List<WebElement> productPrice = divPrice.findElements(By.xpath('//p[@data-test=\'price\']//span'))
-
-//Get total product in cart
-totalProElement = WebUI.getText(findTestObject('Object Repository/MyBag/span_13 items'))
-String totalProText = totalProElement.replaceAll('\\D', '')
-int totalProduct = Integer.parseInt(totalProText)
-
-int sumProduct = 0
-
-List<Float> unitList = new ArrayList<Float>()
-
-for (WebElement quantityOb : productList) {
-	String actual_Text = quantityOb.getText()
-	String temp = actual_Text.replaceAll('\\D', '')
-	float quantity = Float.parseFloat(temp)
-	unitList.add(quantity)
-	sumProduct = (sumProduct + quantity)
-}
-WebUI.verifyEqual(totalProduct, sumProduct)
-
-List<Float> priceList = new ArrayList<Float>()
-
-for (WebElement priceOb : productPrice) {
-    String actual_Text = priceOb.getText()
-    String temp = actual_Text.replaceAll('\\D', '')
-    float price = Float.parseFloat(temp)
-    priceList.add(price)
-}
-
-float sumPrice=0
-for (int i = 0; i < productPrice.size(); i++) {
-	sumPrice = sumPrice+(priceList[i] * unitList[i])
-}
-
-totalPriceWebElement= WebUI.getText(findTestObject('Object Repository/MyBag/span_TotalPrice'))
-String totalPriceText = totalPriceWebElement.replaceAll('\\D', '')
-int totalPrice = Float.parseFloat(totalPriceText)
-
-WebUI.verifyEqual(sumPrice,totalPrice)
-
-println('the total of price: ' + totalPrice)
-println('the total of price: ' + sumPrice)
-println('the total of products: ' + sumProduct)
-println('the total of products: ' + totalProduct)

@@ -51,6 +51,10 @@ public class addAppeleJuice {
 	}
 
 	@Keyword
+	public void addItem(String productName) {
+	}
+
+	@Keyword
 	public void addBananaJuice() {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Banana Juice/div_Banana Juice1.50'), GlobalVariable.TimeOut)
 		WebUI.click(findTestObject('Object Repository/Banana Juice/div_Banana Juice1.50'))
@@ -60,14 +64,6 @@ public class addAppeleJuice {
 		WebUI.click(div_Size500ml)
 		WebUI.setText(inp_Quantity, "1")
 		WebUI.click(btn_AddToBasket)
-	}
-
-	@Keyword
-	public void getInforOfItem() {
-		String nameApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title Apple Juice'))
-		String priceApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title price 3.00'))
-		String sizeApple = WebUI.getAttribute(findTestObject('Object Repository/Apple Juice/input_Bottle-size'),'value')
-		String quantityApple = WebUI.getAttribute(findTestObject('Object Repository/Apple Juice/input_Quantity'),'value')
 	}
 }
 

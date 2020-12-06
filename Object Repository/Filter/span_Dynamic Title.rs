@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Dynamic Flavor</name>
+   <name>span_Dynamic Title</name>
    <tag></tag>
-   <elementGuidId>9623df7a-c678-4084-8163-7a0f7b61616f</elementGuidId>
+   <elementGuidId>b382cd3f-6703-40f2-8d6e-4315a0db72c6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
+         <value>span.sc-cQFLBn.kUxuHh</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@data-test='filterSidebar']/div[4]/div[${no}]</value>
+         <value>//div[@id='root']/div/div/div/div/div/button/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,76 +21,76 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>sc-dxgOiQ ehxJYS</value>
+      <value>sc-cQFLBn kUxuHh</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Orange</value>
+      <value>FILTERS </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;modal-root&quot;)/div[@class=&quot;sc-iGrrsa dibwgQ&quot;]/div[@class=&quot;sc-ipZHIp jMscJC&quot;]/div[@class=&quot;sc-drMfKT kKdwHj&quot;]/div[@class=&quot;sc-krvtoX kZVPwu&quot;]/div[@class=&quot;sc-dxgOiQ ehxJYS&quot;]</value>
+      <value>id(&quot;root&quot;)/div[@class=&quot;category&quot;]/div[@class=&quot;container&quot;]/div[@class=&quot;sc-gqPbQI lwJEj&quot;]/div[@class=&quot;sc-hORach jcidvQ&quot;]/div[@class=&quot;sc-bMVAic PDERw&quot;]/button[@class=&quot;sc-iujRgT dWUOzL&quot;]/span[@class=&quot;sc-cQFLBn kUxuHh&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='modal-root']/div/div/div/div[4]/div[2]</value>
+      <value>//div[@id='root']/div/div/div/div/div/button/span</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Flavor'])[1]/following::div[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Groceries'])[2]/following::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Size'])[1]/following::div[10]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Banana'])[1]/preceding::div[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Products found:'])[1]/preceding::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Bean'])[1]/preceding::div[4]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sort by:'])[1]/preceding::span[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Orange']/parent::*</value>
+      <value>//*/text()[normalize-space(.)='FILTERS']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div/div[4]/div[2]</value>
+      <value>//button/span</value>
    </webElementXpaths>
 </WebElementEntity>

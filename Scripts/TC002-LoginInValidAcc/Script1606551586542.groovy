@@ -15,8 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-CustomKeywords.'loginFunc.login'('https://demo.saleor.io/', 'admin@example.com', '12345')
-WebUI.getText(findTestObject('Object Repository/Login/span_ErrorMess'))
-WebUI.verifyElementText(findTestObject('Object Repository/Login/span_ErrorMess'), 'Please, enter valid credentials')
-
+CustomKeywords.'login_page.loginFunc.login'('https://demo.saleor.io/', 'admin@example.com', '12345')
+CustomKeywords.'login_page.loginFunc.verifyLoginFail'()
+WebUI.closeBrowser()
 
