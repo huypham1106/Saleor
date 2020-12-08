@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>title_Apple Juice</name>
+   <name>div_Title</name>
    <tag></tag>
-   <elementGuidId>bb303cc4-9361-4345-8fa2-59536b4fe171</elementGuidId>
+   <elementGuidId>2edda04b-652a-4759-8933-6bf5dceaedcd</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>h3.sc-erNlkL.eBsHSG</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='root']/div/div[2]/div/div[2]/div/div/h3</value>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Apple Juice'])[2]/following::h3[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,76 +20,90 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>h3</value>
+      <value>div</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-test</name>
       <type>Main</type>
-      <value>productName</value>
+      <value>attributeOption</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-test-id</name>
+      <type>Main</type>
+      <value>500ml</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>sc-erNlkL eBsHSG</value>
+      <value>sc-dfVpRl kciOoL</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Apple Juice</value>
+      <value>500ml</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[@class=&quot;product-page&quot;]/div[@class=&quot;container&quot;]/div[@class=&quot;product-page__product&quot;]/div[@class=&quot;product-page__product__info&quot;]/div[@class=&quot;product-page__product__info--fixed&quot;]/div[@class=&quot;sc-lnmtFM fykVdR&quot;]/h3[@class=&quot;sc-erNlkL eBsHSG&quot;]</value>
+      <value>id(&quot;modal-root&quot;)/div[@class=&quot;sc-iGrrsa gMyMdJ&quot;]/div[@class=&quot;sc-ipZHIp dTYvfJ&quot;]/div[@class=&quot;sc-hIVACf clMqWR&quot;]/div[@class=&quot;sc-gpHHfC iskUAR&quot;]/div[@class=&quot;sc-eXNvrr cDrDlU&quot;]/div[@class=&quot;sc-dfVpRl kciOoL&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/div[2]/div/div[2]/div/div/h3</value>
+      <value>//div[@id='modal-root']/div/div/div/div[2]/div[3]/div</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Apple Juice'])[2]/following::h3[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Please select Size'])[1]/following::div[8]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Juices'])[2]/following::h3[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='GraphQL API'])[2]/following::div[13]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='$3.00'])[1]/preceding::h3[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Capture object:'])[1]/preceding::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Size'])[1]/preceding::h3[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Alt'])[1]/preceding::div[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='500ml']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//h3</value>
+      <value>//div[2]/div[3]/div</value>
    </webElementXpaths>
 </WebElementEntity>

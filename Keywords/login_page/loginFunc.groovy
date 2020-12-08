@@ -47,6 +47,8 @@ public class loginFunc {
 
 	@Keyword
 	public void verifyLoginFail() {
+		// bo get text ra no bi loi ko lay dc text
+		WebUI.getText(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/span_ErrorMess'))
 		WebUI.verifyElementText(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/span_ErrorMess'), 'Please, enter valid credentials')
 	}
 }

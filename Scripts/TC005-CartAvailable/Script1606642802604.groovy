@@ -27,5 +27,5 @@ WebUI.click(findTestObject('Product Detail Page (New)/tab_SubMenu'))
 CustomKeywords.'product.CommonProduct.addProduct'("Seaman Beer")
 CustomKeywords.'cart.CartInHomePage.verifyQuantityInCart'()
 CustomKeywords.'cart.CartInHomePage.verifyPriceInCart'()
-
+WebUI.closeBrowser()
 

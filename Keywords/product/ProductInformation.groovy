@@ -22,7 +22,7 @@ public class ProductInformation {
 		String priceApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_price 3.00'))
 		String nameApple = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_Apple Juice'))
 		String sizeApple = WebUI.getAttribute(findTestObject('Object Repository/Apple Juice/input_Bottle-size'),'value')
-		String quantityApple = WebUI.getAttribute(findTestObject('Product Detail Page (New)/input_Quantity'),'value')
+		String quantityApple = WebUI.getAttribute(findTestObject('Product Detail Page (New)/Compononet Product/input_Quantity'),'value')
 
 		Product itemInScreen = new Product(priceApple, nameApple, sizeApple, quantityApple)
 		productDetailInScreen.add(itemInScreen)

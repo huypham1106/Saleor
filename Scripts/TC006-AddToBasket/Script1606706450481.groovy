@@ -25,7 +25,7 @@ CustomKeywords.'product.ProductInformationHaspMap.saveInforOfProductInScreenByHa
 HashMap<String, HashMap<String,String>> productListInCart = new HashMap<String, HashMap<String,String>>()
 CustomKeywords.'product.ProductInformationHaspMap.saveInforOfProductInCartByHashMap'(productListInCart)
 CustomKeywords.'product.CheckProduct.compareProductInListByHashMap'(productListInScreen, productListInCart)
-
+WebUI.closeBrowser()
 //for (Map.Entry<String, HashMap<String,String>> entry1 : productListInScreen.entrySet()) {
 //	String key = entry1.getKey()
 //	String value1 = entry1.getValue()

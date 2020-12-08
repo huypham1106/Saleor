@@ -14,5 +14,5 @@ CustomKeywords.'login_page.loginFunc.loginWithExistingAccount'()
 CustomKeywords.'menu_bar.MainMenu.clickMainMenu'("Groceries")
 CustomKeywords.'product.ProductList.verifyTotalProduct'()
 
-
+// web bi loi khi click auto nhanh qua thi tu dong sinh ra dublicate san pham
 

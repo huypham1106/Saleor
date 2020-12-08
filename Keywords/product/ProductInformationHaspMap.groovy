@@ -20,7 +20,7 @@ public class ProductInformationHaspMap {
 		String price = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_price 3.00'))
 		String name = WebUI.getText(findTestObject('Object Repository/Apple Juice/title_Apple Juice'))
 		String size = WebUI.getAttribute(findTestObject('Object Repository/Apple Juice/input_Bottle-size'),'value')
-		String quantity = WebUI.getAttribute(findTestObject('Product Detail Page (New)/input_Quantity'),'value')
+		String quantity = WebUI.getAttribute(findTestObject('Product Detail Page (New)/Compononet Product/input_Quantity'),'value')
 		HashMap<String,String> innermap = new HashMap<String,String>()
 		innermap.put("size",size)
 		innermap.put("price",price)

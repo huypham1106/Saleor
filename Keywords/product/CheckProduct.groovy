@@ -61,20 +61,20 @@ public class CheckProduct {
 
 		for (int i=1; i<=sizeList.size() ; i++)
 		{
-			WebUI.click(findTestObject('Product Detail Page (New)/div_size Common',['no': i]))
-			if(WebUI.verifyElementPresent(findTestObject('Product Detail Page (New)/p_Out of stock'), GlobalVariable.TimeOut,FailureHandling.OPTIONAL))
+			WebUI.click(findTestObject('Product Detail Page (New)/Compononet Product/div_size Common',['no': i]))
+			if(WebUI.verifyElementPresent(findTestObject('Product Detail Page (New)/Compononet Product/p_Out of stock'), GlobalVariable.TimeOut,FailureHandling.OPTIONAL))
 
 			{
-				WebUI.verifyElementNotClickable(findTestObject('Product Detail Page (New)/button_Add to basket'))
-				WebUI.click(findTestObject('Product Detail Page (New)/svg_Remove Size'))
+				WebUI.verifyElementNotClickable(findTestObject('Product Detail Page (New)/Compononet Product/button_Add to basket'))
+				WebUI.click(findTestObject('Product Detail Page (New)/Compononet Product/svg_Remove Size'))
 			}
-			else if(WebUI.verifyElementNotPresent(findTestObject('Product Detail Page (New)/p_Out of stock'), GlobalVariable.TimeOut,FailureHandling.OPTIONAL))
+			else if(WebUI.verifyElementNotPresent(findTestObject('Product Detail Page (New)/Compononet Product/p_Out of stock'), GlobalVariable.TimeOut,FailureHandling.OPTIONAL))
 			{
-				WebUI.verifyElementClickable(findTestObject('Product Detail Page (New)/button_Add to basket'))
-				WebUI.click(findTestObject('Product Detail Page (New)/svg_Remove Size'))
+				WebUI.verifyElementClickable(findTestObject('Product Detail Page (New)/Compononet Product/button_Add to basket'))
+				WebUI.click(findTestObject('Product Detail Page (New)/Compononet Product/svg_Remove Size'))
 			}
 
-			WebUI.click(findTestObject('Product Detail Page (New)/svg_Click size'))
+			WebUI.click(findTestObject('Product Detail Page (New)/Compononet Product/svg_Click size'))
 		}
 	}
 	@Keyword
@@ -84,11 +84,11 @@ public class CheckProduct {
 		List<WebElement> productList = driver.findElements(By.xpath("//div[@data-test='productList']//a"))
 
 		for (int i = 1; i <= productList.size(); i++) {
-			WebUI.click(findTestObject('Object Repository/Filter/div_Dynamic Pruduct List', [('no') : i]))
+			WebUI.click(findTestObject('Product List Page (New)/Filter/div_Dynamic Pruduct List', [('no') : i]))
 
-			WebUI.click(findTestObject('Object Repository/Apple Juice/Attribute/div_ATTRIBUTES'))
+			WebUI.click(findTestObject('Product Detail Page (New)/Attribute/div_ATTRIBUTES'))
 
-			String tempFlavor = WebUI.getText(findTestObject('Object Repository/Apple Juice/Attribute/li_Flavor title Attribute'))
+			String tempFlavor = WebUI.getText(findTestObject('Product Detail Page (New)/Attribute/li_Flavor title Attribute'))
 			String flavorInAttribute =tempFlavor.substring(tempFlavor.lastIndexOf(": ") +2)
 			WebUI.verifyEqual(flavor, flavorInAttribute)
 		}

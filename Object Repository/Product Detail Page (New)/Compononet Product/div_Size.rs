@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>p_Apple Juice</name>
+   <name>div_Size</name>
    <tag></tag>
-   <elementGuidId>14493f12-c0d4-4a24-a73b-043acb74a425</elementGuidId>
+   <elementGuidId>4515e0d8-e811-49eb-bc71-19234d42a2d6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>a > p</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='root']/div[3]/div/div/ul/li/div/a/p</value>
+         <value>//div[@id='root']/div/div[2]/div/div[2]/div/div/h4/span[last()]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,62 +20,90 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>p</value>
+      <value>div</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-test</name>
       <type>Main</type>
-      <value>name</value>
+      <value>attributeOption</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-test-id</name>
+      <type>Main</type>
+      <value>500ml</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>sc-dfVpRl kciOoL</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Apple Juice</value>
+      <value>500ml</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[@class=&quot;overlay overlay--cart&quot;]/div[@class=&quot;overlay__right&quot;]/div[@class=&quot;cart&quot;]/ul[@class=&quot;cart__list&quot;]/li[@class=&quot;cart__list__item&quot;]/div[@class=&quot;cart__list__item__details&quot;]/a[1]/p[1]</value>
+      <value>id(&quot;modal-root&quot;)/div[@class=&quot;sc-iGrrsa gMyMdJ&quot;]/div[@class=&quot;sc-ipZHIp dTYvfJ&quot;]/div[@class=&quot;sc-hIVACf clMqWR&quot;]/div[@class=&quot;sc-gpHHfC iskUAR&quot;]/div[@class=&quot;sc-eXNvrr cDrDlU&quot;]/div[@class=&quot;sc-dfVpRl kciOoL&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div[3]/div/div/ul/li/div/a/p</value>
+      <value>//div[@id='modal-root']/div/div/div/div[2]/div[3]/div</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='$3.00'])[4]/following::p[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Please select Size'])[1]/following::div[8]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Qty: 1'])[1]/preceding::p[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='GraphQL API'])[2]/following::div[13]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Subtotal'])[1]/preceding::p[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Capture object:'])[1]/preceding::div[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Alt'])[1]/preceding::div[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='500ml']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//a/p</value>
+      <value>//div[2]/div[3]/div</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -24,14 +24,14 @@ public class MainMenu {
 
 	@Keyword
 	public void clickMainMenu(String mainMenu) {
-		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name': mainMenu]), GlobalVariable.TimeOut)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'), GlobalVariable.TimeOut)
 		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name': mainMenu]))
 	}
 
 	@Keyword
 	public void clickSubMenu( String mainMenu,String subMenu) {
 		WebUI.waitForPageLoad(GlobalVariable.TimeOut)
-		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name':mainMenu]), GlobalVariable.TimeOut)
+		WebUI.waitForElementPresent(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name':mainMenu]), GlobalVariable.TimeOut)
 		WebUI.mouseOver(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name':mainMenu]))
 		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Left/SubMenu_Left/a_SubMenu',['name':subMenu]),GlobalVariable.TimeOut )
 		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Left/SubMenu_Left/a_SubMenu',['name':subMenu]))

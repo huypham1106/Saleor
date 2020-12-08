@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='root']/div[3]/div/div/div[3]/div/form/div/span</value>
+         <value>//div[@class='input'][1]//span[contains(@class,'input__error')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

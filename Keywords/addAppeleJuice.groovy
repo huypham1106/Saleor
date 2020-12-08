@@ -22,10 +22,10 @@ public class addAppeleJuice {
 
 	private TestObject lab_Groceries = findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu')
 	private TestObject div_AppleJuice = findTestObject('Main Menu/div_Apple Juice')
-	private TestObject btn_AddToBasket = findTestObject('Product Detail Page (New)/button_Add to basket')
-	private TestObject svg_ClickSize = findTestObject('Product Detail Page (New)/svg_Click size')
-	private TestObject div_Size500ml = findTestObject('Product Detail Page (New)/div_size 500ml')
-	private TestObject inp_Quantity = findTestObject('Product Detail Page (New)/input_Quantity')
+	private TestObject btn_AddToBasket = findTestObject('Product Detail Page (New)/Compononet Product/button_Add to basket')
+	private TestObject svg_ClickSize = findTestObject('Product Detail Page (New)/Compononet Product/svg_Click size')
+	private TestObject div_Size500ml = findTestObject('Product Detail Page (New)/Compononet Product/div_size 500ml')
+	private TestObject inp_Quantity = findTestObject('Product Detail Page (New)/Compononet Product/input_Quantity')
 
 
 	@Keyword

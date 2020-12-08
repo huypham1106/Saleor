@@ -32,8 +32,5 @@ public class Filter {
 		//WebUI.click(findTestObject('Product List Page (New)/Filter/div_Dynamic Flavor',['flavor':flavor]))
 
 		WebUI.click(findTestObject('Product List Page (New)/Filter/div_Dynamic Flavor',['flavor':flavor]))
-
-
-		WebUI.waitForElementVisible(findTestObject('Main Menu/div_Apple Juice'), GlobalVariable.TimeOut)
 	}
 }

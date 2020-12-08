@@ -1,4 +1,5 @@
 package product
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -19,18 +20,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class CommonProduct {
-
-	private TestObject lab_Groceries = findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu')
-	private TestObject lab_Alcohol = findTestObject('Common Header/MainMenu/MainMenu_Left/SubMenu_Left/a_SubMenu')
-	private TestObject div_RebW = findTestObject('Product List Page (New)/div_Product')
-	private TestObject btn_AddBaskett = findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/button_Add to basket')
-	private TestObject btn_Close = findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button')
-	private TestObject tab_Alcohol = findTestObject('Product Detail Page (New)/tab_SubMenu')
-	//private TestObject div_SeaB = findTestObject('Product/div_Seaman Beer2.24')
-	//private TestObject txb_pid = findTestObject('Product/button_Add to basket')
-
-
+public class CommonProduct2 {
+	
 	@Keyword
 	public void addProduct(String productName) {
 		WebUI.waitForElementClickable(findTestObject('Product List Page (New)/div_Product',['name': productName]), GlobalVariable.TimeOut)
@@ -44,7 +35,7 @@ public class CommonProduct {
 
 		WebUI.setText(findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/input_Quantity'), "2")
 		WebUI.click(findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/button_Add to basket'))
-		WebUI.waitForElementClickable(btn_Close, GlobalVariable.TimeOut)
+		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'), GlobalVariable.TimeOut)
 	}
 
 	@Keyword
