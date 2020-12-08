@@ -23,14 +23,13 @@ public class loginFunc {
 
 	@Keyword
 	public void loginWithAccount (String appUrl, String userName, String passWord) {
-		WebUI.openBrowser(appUrl)
 		WebUI.waitForPageLoad(GlobalVariable.TimeOut)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Login/svg_Profile'), GlobalVariable.TimeOut)
-		WebUI.click(findTestObject('Object Repository/Login/svg_Profile'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Login/input_Email'), GlobalVariable.TimeOut)
-		WebUI.setText(findTestObject('Object Repository/Login/input_Email'), userName)
-		WebUI.setText(findTestObject('Object Repository/Login/input_Password'), passWord)
-		WebUI.click(findTestObject('Object Repository/Login/button_Sign in'))
+		WebUI.waitForElementVisible(findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'), GlobalVariable.TimeOut)
+		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'))
+		WebUI.waitForElementVisible(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/input_Email'), GlobalVariable.TimeOut)
+		WebUI.setText(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/input_Email'), userName)
+		WebUI.setText(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/input_Password'), passWord)
+		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/button_Sign_In'))
 	}
 
 	@Keyword
@@ -40,16 +39,14 @@ public class loginFunc {
 
 	@Keyword
 	public void verifyLoginSuccess() {
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Login/svg_Profile'), GlobalVariable.TimeOut)
-		WebUI.mouseOver(findTestObject('Object Repository/Login/svg_Profile'))
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Login/label_My Account'), GlobalVariable.TimeOut)
-		WebUI.verifyElementText(findTestObject('Object Repository/Login/label_My Account'), "MY ACCOUNT")
+		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'), GlobalVariable.TimeOut)
+		WebUI.mouseOver(findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'))
+		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Right/Logged In/label_My Account'), GlobalVariable.TimeOut)
+		WebUI.verifyElementText(findTestObject('Common Header/MainMenu/MainMenu_Right/Logged In/label_My Account'), "MY ACCOUNT")
 	}
-	
+
 	@Keyword
-	public void verifyLoginFail()
-	{
-		WebUI.getText(findTestObject('Object Repository/Login/span_ErrorMess'))
-		WebUI.verifyElementText(findTestObject('Object Repository/Login/span_ErrorMess'), 'Please, enter valid credentials')
+	public void verifyLoginFail() {
+		WebUI.verifyElementText(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/span_ErrorMess'), 'Please, enter valid credentials')
 	}
 }

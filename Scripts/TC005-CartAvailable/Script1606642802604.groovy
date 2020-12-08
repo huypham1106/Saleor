@@ -21,10 +21,10 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.openBrowser(GlobalVariable.appUrl)
 CustomKeywords.'menu_bar.MainMenu.clickSubMenu'("Groceries", "Alcohol")
-CustomKeywords.'product.AlcoholProduct.addProduct'("Red Wine")
-WebUI.click(findTestObject('Object Repository/MyBag/svg_Close Button'))
-WebUI.click(findTestObject('Object Repository/Alcohol/a_Alcohol(2)'))
-CustomKeywords.'product.AlcoholProduct.addProduct'("Seaman Beer")
+CustomKeywords.'product.CommonProduct.addProduct'("Red Wine")
+WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'))
+WebUI.click(findTestObject('Product Detail Page (New)/tab_SubMenu'))
+CustomKeywords.'product.CommonProduct.addProduct'("Seaman Beer")
 CustomKeywords.'cart.CartInHomePage.verifyQuantityInCart'()
 CustomKeywords.'cart.CartInHomePage.verifyPriceInCart'()
 

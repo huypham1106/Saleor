@@ -15,7 +15,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-CustomKeywords.'login_page.loginFunc.login'('https://demo.saleor.io/', 'admin@example.com', '12345')
+WebUI.openBrowser(GlobalVariable.appUrl)
+CustomKeywords.'login_page.loginFunc.loginWithAccount'('https://demo.saleor.io/', 'admin@example.com', '12345')
 CustomKeywords.'login_page.loginFunc.verifyLoginFail'()
 WebUI.closeBrowser()
 

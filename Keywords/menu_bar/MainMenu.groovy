@@ -24,16 +24,16 @@ public class MainMenu {
 
 	@Keyword
 	public void clickMainMenu(String mainMenu) {
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Groceries/a_Groceries',['name': mainMenu]), GlobalVariable.TimeOut)
-		WebUI.click(findTestObject('Object Repository/Groceries/a_Groceries',['name': mainMenu]))
+		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name': mainMenu]), GlobalVariable.TimeOut)
+		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name': mainMenu]))
 	}
 
 	@Keyword
 	public void clickSubMenu( String mainMenu,String subMenu) {
-		WebUI.delay(5)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Groceries/a_Groceries',['name':mainMenu]), GlobalVariable.TimeOut)
-		WebUI.mouseOver(findTestObject('Object Repository/Groceries/a_Groceries',['name':mainMenu]))
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Alcohol/a_Alcohol',['name':subMenu]),GlobalVariable.TimeOut )
-		WebUI.click(findTestObject('Object Repository/Alcohol/a_Alcohol',['name':subMenu]))
+		WebUI.waitForPageLoad(GlobalVariable.TimeOut)
+		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name':mainMenu]), GlobalVariable.TimeOut)
+		WebUI.mouseOver(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name':mainMenu]))
+		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Left/SubMenu_Left/a_SubMenu',['name':subMenu]),GlobalVariable.TimeOut )
+		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Left/SubMenu_Left/a_SubMenu',['name':subMenu]))
 	}
 }

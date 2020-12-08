@@ -16,11 +16,11 @@ public class ProductList {
 
 	@Keyword
 	public void verifyTotalProduct() {
-		String temp = WebUI.getText(findTestObject('Groceries/span_Products found')).replaceAll("\\D","")
+		String temp = WebUI.getText(findTestObject('Product List Page (New)/span_Products found')).replaceAll("\\D","")
 		int totalProduct = Integer.parseInt(temp)
 		for (int i = 1;i<=(totalProduct/6); i++) {
-			WebUI.scrollToElement(findTestObject('Object Repository/Groceries/button_More'), GlobalVariable.TimeOut)
-			WebUI.click(findTestObject('Object Repository/Groceries/button_More'))
+			WebUI.scrollToElement(findTestObject('Product List Page (New)/button_More'), GlobalVariable.TimeOut)
+			WebUI.click(findTestObject('Product List Page (New)/button_More'))
 		}
 
 		WebDriver driver = DriverFactory.getWebDriver()

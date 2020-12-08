@@ -14,7 +14,7 @@ import internal.GlobalVariable
 public class SearchF_saleor {
 
 
-	private TestObject Search_icon = findTestObject('Home page/Search_icon')
+	private TestObject Search_icon = findTestObject('Common Header/MainMenu/MainMenu_Right/div_Search_Icon')
 
 	private TestObject Search_input = findTestObject('Object Repository/Home page/Search_input')
 

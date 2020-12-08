@@ -9,7 +9,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
-
+WebUI.openBrowser(GlobalVariable.appUrl)
 CustomKeywords.'login_page.loginFunc.loginWithExistingAccount'()
 CustomKeywords.'menu_bar.MainMenu.clickMainMenu'("Groceries")
 CustomKeywords.'product.ProductList.verifyTotalProduct'()

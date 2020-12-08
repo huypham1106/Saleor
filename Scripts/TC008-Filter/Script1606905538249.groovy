@@ -19,29 +19,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-CustomKeywords.'addAppeleJuice.clickGroceriesLabel'()
-
-//List<WebElement> productList = driver.findElements(By.xpath("//div[@data-test='productList']//a"))
+WebUI.openBrowser(GlobalVariable.appUrl)
+CustomKeywords.'menu_bar.MainMenu.clickMainMenu'("Groceries")
 String flavor = "Orange"
 
-//List<Product> list = new List<Product>()
+CustomKeywords.'filter_Function.Filter.clickFlavorInFilter'(flavor)
+CustomKeywords.'product.CheckProduct.checkFlavorInAttribute'(flavor)
+WebUI.closeBrowser()
 
-CustomKeywords.'filter_Function.Filter.selectFlavors'(flavor)
-//CustomKeywords.'filter_Function.Filter.selectFlavors'(list)
 
-//WebDriver driver = DriverFactory.getWebDriver()
-//
-//List<Product> productList = driver.findElements(By.xpath("//div[@data-test='productList']//a"))
-//
-//for (int i = 1; i <= productList.size(); i++) {
-//    WebUI.click(findTestObject('Object Repository/Filter/div_Dynamic Pruduct List', [('no') : i]))
-//
-//    WebUI.click(findTestObject('Object Repository/Apple Juice/Attribute/div_ATTRIBUTES'))
-//
-//    String text = WebUI.getText(findTestObject('Object Repository/Apple Juice/Attribute/li_Flavor title Attribute'))
-//
-//    WebUI.verifyEqual(flavor, text)
-//}
 
-//CustomKeywords.'addAppeleJuice.addAppleJuice'()
 

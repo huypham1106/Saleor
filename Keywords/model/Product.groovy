@@ -1,4 +1,5 @@
-package filter_Function
+package model
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -19,21 +20,55 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class Filter {
+public class Product {
 
-	String titleProduct
-	@Keyword
-	public void clickFlavorInFilter(String flavor) {
-		WebUI.click(findTestObject('Product List Page (New)/Filter/span_FILTERS'))
-		WebUI.scrollToElement(findTestObject('Product List Page (New)/Filter/button_VIEW ALL OPTIONS'), GlobalVariable.TimeOut)
-		WebUI.waitForElementClickable(findTestObject('Product List Page (New)/Filter/button_VIEW ALL OPTIONS'), GlobalVariable.TimeOut)
-		WebUI.click(findTestObject('Product List Page (New)/Filter/button_VIEW ALL OPTIONS'))
-		//WebUI.waitForElementClickable(findTestObject('Product List Page (New)/Filter/div_Dynamic Flavor',['flavor':flavor]), GlobalVariable.TimeOut)
-		//WebUI.click(findTestObject('Product List Page (New)/Filter/div_Dynamic Flavor',['flavor':flavor]))
+	public String price;
+	public String name;
+	public String quantity;
+	public String size;
 
-		WebUI.click(findTestObject('Product List Page (New)/Filter/div_Dynamic Flavor',['flavor':flavor]))
+	public Product (String price, String name, String quantity, String size) {
+		this.price = price
+		this.name = name
+		this.size = size
+		this.quantity = quantity
+	}
 
 
-		WebUI.waitForElementVisible(findTestObject('Main Menu/div_Apple Juice'), GlobalVariable.TimeOut)
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(String quantity) {
+		this.quantity = quantity;
+	}
+
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
+
+	public void display() {
+		println("this is" + getName() +getPrice() + getSize() +getQuantity())
 	}
 }

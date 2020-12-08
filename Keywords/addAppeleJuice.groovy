@@ -20,12 +20,12 @@ import internal.GlobalVariable
 
 public class addAppeleJuice {
 
-	private TestObject lab_Groceries = findTestObject('Object Repository/Groceries/a_Groceries')
-	private TestObject div_AppleJuice = findTestObject('Object Repository/Groceries/div_Apple Juice')
-	private TestObject btn_AddToBasket = findTestObject('Object Repository/Apple Juice/button_Add to basket')
-	private TestObject svg_ClickSize = findTestObject('Object Repository/Apple Juice/svg_Click size')
-	private TestObject div_Size500ml = findTestObject('Object Repository/Apple Juice/div_size 500ml')
-	private TestObject inp_Quantity = findTestObject('Object Repository/Apple Juice/input_Quantity')
+	private TestObject lab_Groceries = findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu')
+	private TestObject div_AppleJuice = findTestObject('Main Menu/div_Apple Juice')
+	private TestObject btn_AddToBasket = findTestObject('Product Detail Page (New)/button_Add to basket')
+	private TestObject svg_ClickSize = findTestObject('Product Detail Page (New)/svg_Click size')
+	private TestObject div_Size500ml = findTestObject('Product Detail Page (New)/div_size 500ml')
+	private TestObject inp_Quantity = findTestObject('Product Detail Page (New)/input_Quantity')
 
 
 	@Keyword
@@ -46,8 +46,8 @@ public class addAppeleJuice {
 		WebUI.click(div_Size500ml)
 		WebUI.setText(inp_Quantity, "2")
 		WebUI.click(btn_AddToBasket)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/MyBag/svg_Close Button'), GlobalVariable.TimeOut)
-		WebUI.click(findTestObject('Object Repository/MyBag/svg_Close Button'))
+		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'), GlobalVariable.TimeOut)
+		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'))
 	}
 
 	@Keyword
