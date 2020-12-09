@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@data-test='filterSidebar']//div[text()='Flavor']//following-sibling::div[text()='${flavor}']</value>
+         <value>//div[@data-test='filterSidebar']//div[text()='${flavor}']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser(GlobalVariable.appUrl)
-CustomKeywords.'login_page.loginFunc.loginWithExistingAccount'()
-CustomKeywords.'login_page.loginFunc.verifyLoginSuccess'()
+CustomKeywords.'common_Header.loginFunc.loginWithExistingAccount'()
+CustomKeywords.'common_Header.loginFunc.verifyLoginSuccess'()
 WebUI.closeBrowser()
 
