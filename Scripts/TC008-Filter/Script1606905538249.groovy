@@ -20,11 +20,11 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.openBrowser(GlobalVariable.appUrl)
-CustomKeywords.'menu_bar.MainMenu.clickMainMenu'("Groceries")
-String flavor = "5.1%"
+CustomKeywords.'page.CommonHeader.menuLeft.Menu.MainMenu.clickMainMenu'("Groceries")
+String flavor = "500ml"
 
-CustomKeywords.'filter_Function.Filter.clickFlavorInFilter'(flavor)
-CustomKeywords.'product.CheckProduct.checkFlavorInAttribute'(flavor)
+CustomKeywords.'page.ProductList.header.Filter.clickFlavorInFilter'(flavor)
+CustomKeywords.'common.Verify.CheckProductIn2List.checkFlavorInAttribute'(flavor)
 //WebUI.closeBrowser()
 
 

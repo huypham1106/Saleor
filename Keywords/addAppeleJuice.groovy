@@ -25,7 +25,7 @@ public class addAppeleJuice {
 	private TestObject btn_AddToBasket = findTestObject('Product Detail Page (New)/Compononet Product/button_Add to basket')
 	private TestObject svg_ClickSize = findTestObject('Product Detail Page (New)/Compononet Product/svg_Click size')
 	private TestObject div_Size500ml = findTestObject('Product Detail Page (New)/Compononet Product/div_size 500ml')
-	private TestObject inp_Quantity = findTestObject('Product Detail Page (New)/Compononet Product/input_Quantity')
+	private TestObject inp_Quantity = findTestObject('Product Detail Page (New)/Compononet Product/div_Quantity_On_Screen')
 
 
 	@Keyword

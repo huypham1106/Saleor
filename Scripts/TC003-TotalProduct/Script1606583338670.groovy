@@ -10,9 +10,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 WebUI.openBrowser(GlobalVariable.appUrl)
-CustomKeywords.'common_Header.loginFunc.loginWithExistingAccount'()
-CustomKeywords.'menu_bar.MainMenu.clickMainMenu'("Groceries")
-CustomKeywords.'product.ProductList.verifyTotalProduct'()
+CustomKeywords.'page.CommonHeader.menuRight.Login.loginIntoApp.loginWithExistingAccount'()
+CustomKeywords.'page.CommonHeader.menuLeft.Menu.MainMenu.clickMainMenu'("Groceries")
+CustomKeywords.'page.ProductList.commonVerify.TotalProduct.verifyTotalProduct'()
 
 // web bi loi khi click auto nhanh qua thi tu dong sinh ra dublicate san pham
 

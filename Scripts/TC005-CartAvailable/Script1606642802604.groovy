@@ -20,12 +20,15 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.openBrowser(GlobalVariable.appUrl)
-CustomKeywords.'menu_bar.MainMenu.clickSubMenu'("Groceries", "Alcohol")
-CustomKeywords.'product.CommonProduct.addProduct'("Red Wine")
+CustomKeywords.'page.CommonHeader.menuLeft.Menu.MainMenu.clickSubMenu'("Groceries", "Alcohol")
+CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Red Wine")
 WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'))
 WebUI.click(findTestObject('Product Detail Page (New)/tab_SubMenu'))
-CustomKeywords.'product.CommonProduct.addProduct'("Seaman Beer")
-CustomKeywords.'cart.CartInHomePage.verifyQuantityInCart'()
-CustomKeywords.'cart.CartInHomePage.verifyPriceInCart'()
+CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Seaman Beer")
+WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'))
+WebUI.click(findTestObject('Product Detail Page (New)/tab_SubMenu'))
+CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Seaman Beer")
+CustomKeywords.'page.CommonHeader.menuRight.Cart.VerifyCart.verifyQuantityInCart'()
+CustomKeywords.'page.CommonHeader.menuRight.Cart.VerifyCart.verifyPriceInCart'()
 WebUI.closeBrowser()
 

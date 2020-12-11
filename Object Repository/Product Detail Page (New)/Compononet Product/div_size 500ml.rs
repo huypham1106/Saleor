@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='root']/div/div[2]/div/div[2]/div/div/div/div/div/div/input</value>
+         <value>//div[@data-test='attributeOption' and text()='500ml']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

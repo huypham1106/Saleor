@@ -11,12 +11,12 @@ import internal.GlobalVariable
 
 
 WebUI.openBrowser(GlobalVariable.appUrl)
-CustomKeywords.'menu_bar.MainMenu.clickSubMenu'("Groceries", "Alcohol")
-CustomKeywords.'product.CommonProduct.addProduct'("Red Wine")
+CustomKeywords.'page.CommonHeader.menuLeft.Menu.MainMenu.clickSubMenu'("Groceries", "Alcohol")
+CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Red Wine")
 WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'))
 WebUI.click(findTestObject('Product Detail Page (New)/tab_SubMenu'))
-CustomKeywords.'product.CommonProduct.addProduct'("Seaman Beer")
-CustomKeywords.'cart.CartInHomePage.verifyCartIsEmpty'()
+CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Seaman Beer")
+CustomKeywords.'page.CommonHeader.menuRight.Cart.VerifyCart.verifyCartIsEmpty'()
 WebUI.closeBrowser()
 
 
