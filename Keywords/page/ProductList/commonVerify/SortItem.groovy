@@ -34,5 +34,4 @@ public class SortItem {
 		println("gia tri cua flag:" + flag)
 		return flag
 	}
-
 }

@@ -13,8 +13,7 @@ WebUI.openBrowser(GlobalVariable.appUrl)
 CustomKeywords.'page.CommonHeader.menuLeft.Menu.MainMenu.clickMainMenu'("Groceries")
 
 CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Apple Juice")
-//WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'), GlobalVariable.TimeOut)
-WebUI.waitForElementPresent(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'), GlobalVariable.TimeOut)
+WebUI.waitForElementVisible(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'), GlobalVariable.TimeOut)
 WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'))
 
 HashMap<String, HashMap<String,String>> productListInScreen = new HashMap<String, HashMap<String,String>>()

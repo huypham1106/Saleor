@@ -21,32 +21,31 @@ import internal.GlobalVariable
 
 public class CommonProduct {
 
-	private TestObject lab_Groceries = findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu')
-	private TestObject lab_Alcohol = findTestObject('Common Header/MainMenu/MainMenu_Left/SubMenu_Left/a_SubMenu')
-	private TestObject div_RebW = findTestObject('Product List Page (New)/div_Product')
+	//	private TestObject lab_Groceries = findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu')
+	//	private TestObject lab_Alcohol = findTestObject('Common Header/MainMenu/MainMenu_Left/SubMenu_Left/a_SubMenu')
+	//	private TestObject div_RebW = findTestObject('Product List Page (New)/div_Product')
 	private TestObject btn_AddBaskett = findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/button_Add to basket')
 	private TestObject btn_Close = findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button')
 	private TestObject tab_Alcohol = findTestObject('Product Detail Page (New)/tab_SubMenu')
-	//private TestObject div_SeaB = findTestObject('Product/div_Seaman Beer2.24')
-	//private TestObject txb_pid = findTestObject('Product/button_Add to basket')
-
+	private TestObject div_Size_500ml = findTestObject('Product Detail Page (New)/Compononet Product/div_size 500ml')
+	private TestObject svg_Click_Size = findTestObject('Product Detail Page (New)/Compononet Product/svg_Click size')
+	private TestObject div_Quantity_Screen = findTestObject('Product Detail Page (New)/Compononet Product/div_Quantity_On_Screen')
 
 	@Keyword
 	public void addProduct(String productName) {
 		WebUI.waitForElementClickable(findTestObject('Product List Page (New)/div_Product',['name': productName]), GlobalVariable.TimeOut)
 		WebUI.click(findTestObject('Product List Page (New)/div_Product',['name': productName]))
 
-		if(WebUI.verifyElementPresent(findTestObject('Product Detail Page (New)/Compononet Product/svg_Click size'), GlobalVariable.TimeOut,FailureHandling.OPTIONAL)) {
-			WebUI.click(findTestObject('Product Detail Page (New)/Compononet Product/svg_Click size'))
-			WebUI.waitForElementClickable(findTestObject('Product Detail Page (New)/Compononet Product/div_size 500ml'), GlobalVariable.TimeOut)
-			WebUI.click(findTestObject('Product Detail Page (New)/Compononet Product/div_size 500ml'))
+		if(WebUI.verifyElementPresent(svg_Click_Size, GlobalVariable.TimeOut,FailureHandling.OPTIONAL)) {
+			WebUI.click(svg_Click_Size)
+			WebUI.waitForElementClickable(div_Size_500ml, GlobalVariable.TimeOut)
+			WebUI.click(div_Size_500ml)
 		}
-		else if(WebUI.verifyElementNotPresent(findTestObject('Product Detail Page (New)/Compononet Product/svg_Click size'), GlobalVariable.TimeOut,FailureHandling.OPTIONAL))
+		else if(WebUI.verifyElementNotPresent(svg_Click_Size, GlobalVariable.TimeOut,FailureHandling.OPTIONAL))
 		{
-			
 		}
-		WebUI.setText(findTestObject('Product Detail Page (New)/Compononet Product/div_Quantity_On_Screen'), "2")
-		WebUI.click(findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/button_Add to basket'))
+		WebUI.setText(div_Quantity_Screen, "2")
+		WebUI.click(btn_AddBaskett)
 		WebUI.waitForElementClickable(btn_Close, GlobalVariable.TimeOut)
 	}
 
@@ -55,8 +54,8 @@ public class CommonProduct {
 		WebUI.waitForElementClickable(findTestObject('Product List Page (New)/div_Product',['name': productName]), GlobalVariable.TimeOut)
 		WebUI.click(findTestObject('Product List Page (New)/div_Product',['name': productName]))
 
-		if(WebUI.verifyElementPresent(findTestObject('Product Detail Page (New)/Compononet Product/svg_Click size'), GlobalVariable.TimeOut,FailureHandling.OPTIONAL)) {
-			WebUI.click(findTestObject('Product Detail Page (New)/Compononet Product/svg_Click size'))
+		if(WebUI.verifyElementPresent(svg_Click_Size, GlobalVariable.TimeOut,FailureHandling.OPTIONAL)) {
+			WebUI.click(svg_Click_Size)
 		}
 	}
 }

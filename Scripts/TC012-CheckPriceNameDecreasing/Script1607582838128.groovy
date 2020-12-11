@@ -11,13 +11,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser(GlobalVariable.appUrl)
-//WebUI.waitForPageLoad(GlobalVariable.TimeOut)
-//WebUI.click(findTestObject('Object Repository/Common Footer/a_Summer_Collection'))
-//WebUI.waitForElementClickable(findTestObject('Object Repository/Product List Page (New)/Sort/div_Sort_Menu_Symbol'), GlobalVariable.TimeOut)
-//WebUI.click(findTestObject('Object Repository/Product List Page (New)/Sort/div_Sort_Menu_Symbol'))
-//WebUI.waitForElementClickable(findTestObject('Object Repository/Product List Page (New)/Sort/div_Name_Decreasing'), GlobalVariable.TimeOut)
-//WebUI.click(findTestObject('Object Repository/Product List Page (New)/Sort/div_Name_Decreasing'))
-
 CustomKeywords.'page.ProductList.header.SortMenu.clickSortMenuItem'("Name Decreasing")
 CustomKeywords.'page.ProductList.body.MoreProductButton.clickMoreButton'()
 List<String> titleList = new ArrayList<String>()

@@ -21,7 +21,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class SortMenu {
-	
+
 	@Keyword
 	public void clickSortMenuItem(String nameMenu) {
 		WebUI.waitForPageLoad(GlobalVariable.TimeOut)

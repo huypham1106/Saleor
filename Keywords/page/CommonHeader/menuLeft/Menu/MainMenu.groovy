@@ -21,10 +21,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class MainMenu {
+	private TestObject div_Profile_Icon = findTestObject('Object Repository/Common Header/MainMenu/MainMenu_Right/div_Profile_Icon')
 
 	@Keyword
 	public void clickMainMenu(String mainMenu) {
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'), GlobalVariable.TimeOut)
+		WebUI.waitForElementPresent(div_Profile_Icon, GlobalVariable.TimeOut)
 		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Left/a_MainMenu',['name': mainMenu]))
 	}
 

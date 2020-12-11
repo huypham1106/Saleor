@@ -15,7 +15,8 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.openBrowser(GlobalVariable.appUrl)
 CustomKeywords.'page.CommonHeader.menuLeft.Menu.MainMenu.clickMainMenu'("Groceries")
 CustomKeywords.'page.ProductDetail.product.CommonProduct.clickDivProduct'("Apple Juice")
-CustomKeywords.'common.Verify.CheckProductIn2List.checkAddButton'()
+//CustomKeywords.'common.Verify.CheckProductIn2List.checkAddButton'()
+CustomKeywords.'page.ProductDetail.product.OutOfStock.verifyOutOfStock'()
 WebUI.closeBrowser()
 
 

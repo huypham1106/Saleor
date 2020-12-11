@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='Size'])[1]/following::*[name()='svg'][1]</value>
+         <value>//div[contains(@class,'info--fixed')]//h3[@data-test='productName']/following::*[name()='svg'][1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement
 
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
@@ -16,6 +17,10 @@ import internal.GlobalVariable
 
 public class CheckProductIn2List {
 
+	private TestObject div_ProductToWait = findTestObject('Object Repository/Result Search Page/div_Proudct_to_wait')
+	private TestObject div_Attribute = findTestObject('Product Detail Page (New)/Attribute/div_ATTRIBUTES')
+	private TestObject li_FlavorTitleAttribute = findTestObject('Product Detail Page (New)/Attribute/li_Flavor title Attribute')
+	
 	@Keyword
 	public int compareProductInList(ArrayList<Product> productDetailInScreen,ArrayList<Product> productDetailInCart) {
 
@@ -57,19 +62,20 @@ public class CheckProductIn2List {
 	@Keyword
 	public void checkFlavorInAttribute(String flavor) {
 		WebDriver driver = DriverFactory.getWebDriver()
-
+		WebUI.waitForElementPresent(div_ProductToWait, GlobalVariable.TimeOut)
 		List<WebElement> productList = driver.findElements(By.xpath("//div[@data-test='productList']//a"))
-
+		
+		println("gia tri la :" +productList.size())
 		for (int i = 1; i <= productList.size(); i++) {
 			WebUI.click(findTestObject('Product List Page (New)/Filter/div_Dynamic Pruduct List', [('no') : i]))
 
-			WebUI.click(findTestObject('Product Detail Page (New)/Attribute/div_ATTRIBUTES'))
+			WebUI.click(div_Attribute)
 
-			String tempFlavor = WebUI.getText(findTestObject('Product Detail Page (New)/Attribute/li_Flavor title Attribute'))
+			String tempFlavor = WebUI.getText(li_FlavorTitleAttribute)
 			String flavorInAttribute =tempFlavor.substring(tempFlavor.lastIndexOf(": ") +2)
 			WebUI.verifyEqual(flavor, flavorInAttribute)
+			println("gia tri la :" +flavorInAttribute)
 		}
 	}
-
 }
 

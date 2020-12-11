@@ -21,18 +21,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class verifyLogin {
+	private TestObject div_Profile_Icon = findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon')
+	private TestObject lbl_My_Account = findTestObject('Common Header/MainMenu/MainMenu_Right/Logged In/label_My Account')
+	private TestObject span_ErrorMess = findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/span_ErrorMess')
+	
+	
 	@Keyword
 	public void verifyLoginSuccess() {
-		WebUI.waitForElementPresent(findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'), GlobalVariable.TimeOut)
-		WebUI.mouseOver(findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'))
-		WebUI.waitForElementClickable(findTestObject('Common Header/MainMenu/MainMenu_Right/Logged In/label_My Account'), GlobalVariable.TimeOut)
-		WebUI.verifyElementText(findTestObject('Common Header/MainMenu/MainMenu_Right/Logged In/label_My Account'), "MY ACCOUNT")
+		WebUI.waitForElementPresent(div_Profile_Icon, GlobalVariable.TimeOut)
+		WebUI.mouseOver(div_Profile_Icon)
+		WebUI.waitForElementClickable(lbl_My_Account, GlobalVariable.TimeOut)
+		WebUI.verifyElementText(lbl_My_Account, "MY ACCOUNT")
 	}
 
 	@Keyword
 	public void verifyLoginFail() {
 		// bo get text ra no bi loi ko lay dc text
 		//WebUI.getText(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/span_ErrorMess'))
-		WebUI.verifyElementText(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/span_ErrorMess'), 'Please, enter valid credentials')
+		WebUI.verifyElementText(span_ErrorMess, 'Please, enter valid credentials')
 	}
 }

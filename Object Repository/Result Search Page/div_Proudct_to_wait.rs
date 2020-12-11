@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Facebook_Icon</name>
+   <name>div_Proudct_to_wait</name>
    <tag></tag>
-   <elementGuidId>b63ae6f6-62fa-4274-ac2d-bd5bb8719dee</elementGuidId>
+   <elementGuidId>6c25bc96-0968-43b0-9259-e590f7d4b94a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>div.social-icon > div</value>
+         <value>div.sc-hORach.jcidvQ</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='footer']/div/a[1]/div/div</value>
+         <value>//div[@data-test='productList']/a[1]/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -24,52 +24,52 @@
       <value>div</value>
    </webElementProperties>
    <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>sc-hORach jcidvQ</value>
+   </webElementProperties>
+   <webElementProperties>
       <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>FILTERS Products found: 3Sort by:  Clear...</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;footer&quot;)/div[@class=&quot;footer__favicons container&quot;]/a[1]/div[@class=&quot;social-icon&quot;]/div[1]</value>
+      <value>id(&quot;root&quot;)/div[@class=&quot;category&quot;]/div[@class=&quot;container&quot;]/div[@class=&quot;sc-gqPbQI lwJEj&quot;]/div[@class=&quot;sc-hORach jcidvQ&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='footer']/div/a/div/div</value>
+      <value>//div[@id='root']/div/div[2]/div/div</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Apparel'])[2]/following::div[4]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search term:'])[1]/following::div[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Groceries'])[2]/following::div[6]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Collections'])[1]/preceding::div[7]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Summer collection'])[1]/preceding::div[7]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='search'])[1]/following::div[11]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div/a/div/div</value>
+      <value>//div[2]/div/div</value>
    </webElementXpaths>
 </WebElementEntity>

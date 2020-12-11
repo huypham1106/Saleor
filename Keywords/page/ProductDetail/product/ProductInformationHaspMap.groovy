@@ -7,26 +7,30 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 
 import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import common.Model.Product
 
 public class ProductInformationHaspMap {
+	private TestObject div_PriceOnScreen = findTestObject('Product Detail Page (New)/Compononet Product/div_Price_On_Screen')
+	private TestObject div_TitleOnScreen = findTestObject('Product Detail Page (New)/Compononet Product/div_Title_On_Screen')
+	private TestObject div_SizeOnScreen = findTestObject('Product Detail Page (New)/Compononet Product/div_Size_On_Screen')
+	private TestObject div_QuantityOnScreen = findTestObject('Product Detail Page (New)/Compononet Product/div_Quantity_On_Screen')
 
 	@Keyword
 	public void saveInforOfProductInScreenByHashMap(HashMap<String, HashMap<String,String>> productListInScreen) {
 
-		String price = WebUI.getText(findTestObject('Product Detail Page (New)/Compononet Product/div_Price_On_Screen'))
-		String name = WebUI.getText(findTestObject('Product Detail Page (New)/Compononet Product/div_Title_On_Screen'))
-		String size = WebUI.getAttribute(findTestObject('Product Detail Page (New)/Compononet Product/div_Size_On_Screen'),'value')
-		String quantity = WebUI.getAttribute(findTestObject('Product Detail Page (New)/Compononet Product/div_Quantity_On_Screen'),'value')
+		String price = WebUI.getText(div_PriceOnScreen)
+		String name = WebUI.getText(div_TitleOnScreen)
+		String size = WebUI.getAttribute(div_SizeOnScreen,'value')
+		String quantity = WebUI.getAttribute(div_QuantityOnScreen,'value')
 		HashMap<String,String> innermap = new HashMap<String,String>()
 		innermap.put("size",size)
 		innermap.put("price",price)
 		innermap.put("quantity",quantity)
 		productListInScreen.put(name,innermap)
-		
 	}
 
 	@Keyword

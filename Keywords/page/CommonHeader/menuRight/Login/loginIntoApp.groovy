@@ -20,16 +20,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class loginIntoApp {
-
+	
+	private TestObject div_Profile_Icon = findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon')
+	private TestObject inp_Email = findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/input_Email')
+	private TestObject ipu_Password = findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/input_Password')
+	private TestObject btn_Email = findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/button_Sign_In')
+	
 	@Keyword
 	public void loginWithAccount (String appUrl, String userName, String passWord) {
 		WebUI.waitForPageLoad(GlobalVariable.TimeOut)
-		WebUI.waitForElementVisible(findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'), GlobalVariable.TimeOut)
-		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/div_Profile_Icon'))
-		WebUI.waitForElementVisible(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/input_Email'), GlobalVariable.TimeOut)
-		WebUI.setText(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/input_Email'), userName)
-		WebUI.setText(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/input_Password'), passWord)
-		WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Login Form/button_Sign_In'))
+		WebUI.waitForElementVisible(div_Profile_Icon, GlobalVariable.TimeOut)
+		WebUI.click(div_Profile_Icon)
+		WebUI.waitForElementVisible(inp_Email, GlobalVariable.TimeOut)
+		WebUI.setText(inp_Email, userName)
+		WebUI.setText(ipu_Password, passWord)
+		WebUI.click(btn_Email)
 	}
 
 	@Keyword

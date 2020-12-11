@@ -7,11 +7,14 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 
 import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 public class VerifyCart {
-
+	private TestObject lab_YourBagIsEmpty = findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/lab_Your_bag_is_empty')
+	private TestObject span_TotalProductInCart = findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/span_Total_product_in_cart')
+	private TestObject span_TotalPriceInCart = findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/span_Total_price_in_cart')
 	@Keyword
 	public void verifyCartIsEmpty() {
 		WebDriver driver = DriverFactory.getWebDriver()
@@ -22,7 +25,7 @@ public class VerifyCart {
 			WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Remove',['no': i]))
 		}
 
-		WebUI.verifyElementText(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/lab_Your_bag_is_empty'), 'YOUR BAG IS EMPTY')
+		WebUI.verifyElementText(lab_YourBagIsEmpty, 'YOUR BAG IS EMPTY')
 	}
 
 	@Keyword
@@ -31,7 +34,7 @@ public class VerifyCart {
 		WebElement productListElement = driver.findElement(By.xpath("//div[@class='cart']//ul[@class='cart__list']"))
 
 		List<WebElement> productList = productListElement.findElements(By.xpath("//span[@data-test='quantity']"))
-		String tempTotalProduct = WebUI.getText(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/span_Total_product_in_cart')).replaceAll('\\D', '')
+		String tempTotalProduct = WebUI.getText(span_TotalProductInCart).replaceAll('\\D', '')
 		int totalProduct = Integer.parseInt(tempTotalProduct)
 
 		int sumProduct = 0
@@ -79,7 +82,7 @@ public class VerifyCart {
 			sumPrice = sumPrice+(priceList[i] * quantityList[i])
 		}
 
-		String totalPriceWebElement= WebUI.getText(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/span_Total_price_in_cart'))
+		String totalPriceWebElement= WebUI.getText(span_TotalPriceInCart)
 		String totalPriceText = totalPriceWebElement.replaceAll('\\D', '')
 		int totalPrice = Float.parseFloat(totalPriceText)
 

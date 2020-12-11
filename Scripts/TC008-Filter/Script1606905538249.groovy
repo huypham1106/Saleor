@@ -21,7 +21,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.openBrowser(GlobalVariable.appUrl)
 CustomKeywords.'page.CommonHeader.menuLeft.Menu.MainMenu.clickMainMenu'("Groceries")
-String flavor = "500ml"
+String flavor = "Orange"
 
 CustomKeywords.'page.ProductList.header.Filter.clickFlavorInFilter'(flavor)
 CustomKeywords.'common.Verify.CheckProductIn2List.checkFlavorInAttribute'(flavor)

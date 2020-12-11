@@ -17,7 +17,6 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser(GlobalVariable.appUrl)
 CustomKeywords.'page.CommonHeader.menuRight.Login.loginIntoApp.loginWithExistingAccount'()
-//CustomKeywords.'page.CommonHeader.menuRight.Login.loginIntoApp.verifyLoginSuccess'()
 CustomKeywords.'page.CommonHeader.menuRight.Login.verifyLogin.verifyLoginSuccess'()
 WebUI.closeBrowser()
 

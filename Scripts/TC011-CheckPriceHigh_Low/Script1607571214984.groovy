@@ -32,14 +32,6 @@ for (WebElement product : productList) {
 }
 println("list la : " + priceList)
 int flag = CustomKeywords.'page.ProductList.commonVerify.SortItem.verifySortItemDecrease'(priceList)
-
-//int flag=0
-//for( int i=0; i < priceList.size()-1;i++) {
-//	if (priceList[i] < priceList[i+1]) {
-//		flag = 1
-//		break;
-//	}
-//}
 println("gia tri cua flag:" + flag)
 
 WebUI.verifyEqual(flag,0)
