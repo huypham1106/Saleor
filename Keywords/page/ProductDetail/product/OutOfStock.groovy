@@ -15,13 +15,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 public class OutOfStock {
-	
+
 	private TestObject div_SizeDynamic = findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/div_size Common')
 	private TestObject btn_AddToBasket=	findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/button_Add to basket')
 	private TestObject p_OutOfStock = findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/p_Out of stock')
 	private TestObject svg_RemoveSize = findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/svg_Remove Size')
 	private TestObject svg_ClickSize = findTestObject('Object Repository/Product Detail Page (New)/Compononet Product/svg_Click size')
-	
+
 	@Keyword
 	public void verifyOutOfStock() {
 		WebDriver driver = DriverFactory.getWebDriver()

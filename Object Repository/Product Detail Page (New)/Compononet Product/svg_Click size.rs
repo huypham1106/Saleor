@@ -6,12 +6,12 @@
    <elementGuidId>e38207ab-a06b-437a-b681-57e58280788b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.sc-kQsIoO.hMZPgF > svg</value>
+         <key>XPATH</key>
+         <value>//div[input[@name='bottle-size']]/following-sibling::span//div//*[name()='svg']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[contains(@class,'info--fixed')]//h3[@data-test='productName']/following::*[name()='svg'][1]</value>
+         <key>CSS</key>
+         <value>div.sc-kQsIoO.hMZPgF > svg</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

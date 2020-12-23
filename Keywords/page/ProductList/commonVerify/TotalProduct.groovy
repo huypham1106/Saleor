@@ -22,6 +22,7 @@ public class TotalProduct {
 	@Keyword
 	public void verifyTotalProduct() {
 		String temp = WebUI.getText(span_Product_found).replaceAll("\\D","")
+		println("gia tri cua tem la" +temp)
 		int totalProduct = Integer.parseInt(temp)
 		for (int i = 1;i<=(totalProduct/6); i++) {
 			WebUI.scrollToElement(btn_More, GlobalVariable.TimeOut)

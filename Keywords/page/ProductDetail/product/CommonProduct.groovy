@@ -46,7 +46,7 @@ public class CommonProduct {
 		}
 		WebUI.setText(div_Quantity_Screen, "2")
 		WebUI.click(btn_AddBaskett)
-		WebUI.waitForElementClickable(btn_Close, GlobalVariable.TimeOut)
+		//WebUI.waitForElementClickable(btn_Close, GlobalVariable.TimeOut)
 	}
 
 	@Keyword

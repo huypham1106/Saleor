@@ -13,6 +13,7 @@ import internal.GlobalVariable
 WebUI.openBrowser(GlobalVariable.appUrl)
 CustomKeywords.'page.CommonHeader.menuLeft.Menu.MainMenu.clickSubMenu'("Groceries", "Alcohol")
 CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Red Wine")
+WebUI.waitForElementVisible(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'), GlobalVariable.TimeOut)
 WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'))
 WebUI.click(findTestObject('Product Detail Page (New)/tab_SubMenu'))
 CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Seaman Beer")

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Unfulfilled</name>
+   <name>div_item_common</name>
    <tag></tag>
-   <elementGuidId>e74641b8-a691-484f-8313-510888327c85</elementGuidId>
+   <elementGuidId>95ec24f6-8a0a-4aaf-9da1-aa5056f2b7ae</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@data-test='orderEntry'][${no}]/div[5]</value>
+         <value>//div[@class=&quot;account__content&quot;]//div[@data-test=&quot;orderEntry&quot;][${no}]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -27,62 +27,62 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>sc-eXEjpC gpJpNS</value>
+      <value>sc-esjQYD cupwki</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Unfulfilled</value>
+      <value>12/9/2020</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;account&quot;]/div[@class=&quot;account__content&quot;]/div[@class=&quot;sc-gzOgki ehNPHd&quot;]/div[@class=&quot;sc-iyvyFf dWjVUf&quot;]/div[@class=&quot;sc-eXEjpC gpJpNS&quot;]</value>
+      <value>id(&quot;root&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;account&quot;]/div[@class=&quot;account__content&quot;]/div[@class=&quot;sc-gzOgki ehNPHd&quot;]/div[@class=&quot;sc-iyvyFf dWjVUf&quot;]/div[@class=&quot;sc-esjQYD cupwki&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/div/div[2]/div/div[3]/div[5]</value>
+      <value>//div[@id='root']/div/div/div[2]/div/div[3]/div[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='$163.97'])[1]/following::div[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Unfulfilled'])[1]/following::div[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Unfulfilled'])[1]/following::div[6]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='$7.26'])[1]/following::div[5]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='$19.15'])[1]/preceding::div[4]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='$163.97'])[1]/preceding::div[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Unfulfilled'])[3]/preceding::div[5]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Unfulfilled'])[2]/preceding::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[3]/div[5]</value>
+      <value>//div[3]/div[3]</value>
    </webElementXpaths>
 </WebElementEntity>

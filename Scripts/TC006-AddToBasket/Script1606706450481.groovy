@@ -16,9 +16,11 @@ CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Apple Juic
 WebUI.waitForElementVisible(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'), GlobalVariable.TimeOut)
 WebUI.click(findTestObject('Common Header/MainMenu/MainMenu_Right/Cart Form/svg_Close Button'))
 
+
 HashMap<String, HashMap<String,String>> productListInScreen = new HashMap<String, HashMap<String,String>>()
 CustomKeywords.'page.ProductDetail.product.ProductInformationHaspMap.saveInforOfProductInScreenByHashMap'(productListInScreen)
-CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Banana Juice")
+WebUI.click(findTestObject('Object Repository/Product Detail Page (New)/tab_SubMenu'))
+CustomKeywords.'page.ProductDetail.product.CommonProduct.addProduct'("Carrot Juice")
 CustomKeywords.'page.ProductDetail.product.ProductInformationHaspMap.saveInforOfProductInScreenByHashMap'(productListInScreen)
 
 
